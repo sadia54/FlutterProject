@@ -1,4 +1,5 @@
-import 'package:codepur_practice_a/home_page.dart';
+import 'package:codepur_practice_a/pages/home_page.dart';
+import 'package:codepur_practice_a/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,18 @@ class MyApp extends StatelessWidget {
     // const pi = 3.4;
 
     return MaterialApp(
-      home: HomePage(),
+      // home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark
+      // ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/loginpage": (context) => LoginPage()
+      },
     );
   }
 }
