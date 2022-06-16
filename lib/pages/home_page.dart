@@ -1,8 +1,10 @@
 import 'package:codepur_practice_a/Models/Catallog.dart';
+import 'package:codepur_practice_a/utis/routes.dart';
 import 'package:codepur_practice_a/widgets/home_widget/catalog_header.dart';
 import 'package:codepur_practice_a/widgets/home_widget/catalog_list.dart';
 
 import 'package:codepur_practice_a/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -41,6 +43,11 @@ class _HomePageState extends State<HomePage> {
     // final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: (() => Navigator.pushNamed(context, MyRoutes.cartRoute)),
+          backgroundColor: MyTheme.darkBluishColor,
+          child: Icon(CupertinoIcons.cart),
+        ),
         // appBar: AppBar(
         //   title: Text(
         //     "Catalog App",
