@@ -67,7 +67,7 @@ class CatalogItem extends StatelessWidget {
                               StadiumBorder(),
                             ),
                           )),
-                    ]).pOnly(right: 8.0)
+                    ]).pOnly(right: 5.0)
               ],
             ))
           ],
